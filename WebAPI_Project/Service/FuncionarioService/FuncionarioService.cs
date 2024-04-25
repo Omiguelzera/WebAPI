@@ -93,6 +93,7 @@ namespace WebAPI_Project.Service.FuncionarioService
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Funcionario não encontrado!";
                     serviceResponse.Sucesso = false;
+                    return serviceResponse;
                 }
 
                 serviceResponse.Dados = funcionario;
@@ -121,6 +122,7 @@ namespace WebAPI_Project.Service.FuncionarioService
                 if (serviceResponse.Dados.Count == 0)
                 {
                     serviceResponse.Mensagem = "Nenhum dado encontrado!";
+                    return serviceResponse;
                 }
 
             } 
@@ -145,6 +147,7 @@ namespace WebAPI_Project.Service.FuncionarioService
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Funcionario não encontrado!";
                     serviceResponse.Sucesso = false;
+                    return serviceResponse;
                 }
 
                 funcionario.Ativo = false;
@@ -180,6 +183,7 @@ namespace WebAPI_Project.Service.FuncionarioService
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Funcionario não encontrado";
                     serviceResponse.Sucesso = false;
+                    return serviceResponse;
                 }
 
                 funcionario.DataDeAlteracao = DateTime.Now.ToLocalTime();
